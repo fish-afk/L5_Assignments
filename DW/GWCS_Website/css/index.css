@@ -1,0 +1,1827 @@
+@font-face {
+	font-family: "Satoshi-light";
+	src: url("../assets/fonts/Satoshi-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Satoshi-dark";
+	src: url("../assets/fonts/Satoshi-Black.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Satoshi-bold";
+	src: url("../assets/fonts/Satoshi-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Satoshi-medium";
+	src: url("../assets/fonts/Satoshi-Medium.ttf") format("truetype");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	max-width: 1920px;
+	box-sizing: border-box;
+	font-family: "Satoshi-Medium";
+}
+
+/* GENERAL STYLES --------------------------------------------------------------------------------------------------------------------*/
+
+body {
+	min-height: 100vh;
+	background: linear-gradient(0deg, rgba(21, 68, 55, 1) 0%, rgba(2, 27, 32, 1) 100%, rgba(0, 14, 10, 1) 100%, rgba(10, 74, 87, 1) 100%);
+}
+
+.box {
+	width: 100%;
+	max-width: 1920px;
+	display: flex;
+	justify-content: center;
+}
+
+.box-normal {
+	width: 100%;
+	max-width: 1920px;
+	display: flex;
+}
+
+.gradient {
+	background: linear-gradient(0deg, rgba(21, 68, 55, 1) 0%, rgba(2, 27, 32, 1) 100%, rgba(0, 14, 10, 1) 100%, rgba(10, 74, 87, 1) 100%);
+}
+
+.cursor {
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	opacity: 0.6;
+	filter: blur(1.4rem);
+	background: rgb(170, 252, 117);
+	transition: all 200ms ease-out;
+	position: fixed;
+	pointer-events: none;
+	left: 0;
+	top: 0;
+	transform: translate(calc(-50% + 15px), -50%);
+}
+
+.hover {
+	cursor: pointer;
+	width: 0;
+	height: 0;
+}
+
+.cursorinnerhover {
+	width: 50px;
+	height: 50px;
+	opacity: 0.5;
+}
+
+/* INDEX PAGE -----------------------------------------------------------------------------------------------------------------------------------*/
+
+.index-top {
+	margin-top: 3rem;
+	padding: 3rem;
+	margin-bottom: 5rem;
+	transition: all 309ms ease-in-out;
+}
+
+.index-mid {
+	padding: 3rem;
+}
+
+.index-mid h2 {
+	text-align: center;
+	font-family: Satoshi-light;
+	font-size: 4rem;
+	font-weight: lighter;
+	color: rgb(170, 252, 117);
+	opacity: 0.8;
+}
+
+.index-mid .pitch-types {
+	margin-top: 5rem;
+}
+
+.index-mid .pitch-types {
+	transition: all 300ms ease-in-out;
+}
+
+.index-mid .pitch-types .pitch h3 {
+	font-family: Satoshi-dark;
+	color: white;
+	text-align: center;
+}
+
+.detailtext {
+	display: none;
+	text-align: center;
+	padding: 10px;
+}
+
+.detailtext a {
+	color: #00e1ff;
+	font-family: Satoshi-light;
+	font-size: 1.2rem;
+}
+
+.pitch:hover .detailtext {
+	display: block;
+}
+
+.index-mid .pitch-types .pitch img {
+	border-radius: 50px;
+	padding: 2rem;
+}
+
+.index-final {
+	padding: 3rem;
+}
+
+.index-final h2 {
+	text-align: center;
+	font-family: Satoshi-light;
+	font-size: 4rem;
+	font-weight: lighter;
+	color: rgb(170, 252, 117);
+	opacity: 0.8;
+	margin-bottom: 2rem;
+}
+
+.index-final .gallery .site {
+	height: 100%;
+	transition: all 300ms ease-in-out;
+}
+
+.index-final .gallery .site .site-name {
+	color: rgb(255, 255, 255);
+	padding: 1rem;
+	font-size: 2rem;
+	font-family: Satoshi-light;
+}
+
+.index-final .gallery .site .site-name a {
+	text-decoration: none;
+	color: white;
+	transition: all 300ms ease-in-out;
+}
+
+.index-final .gallery .site .site-name a:hover {
+	text-decoration: underline;
+	color: #00e1ff;
+}
+
+.index-final .gallery .site .location-map {
+	width: 100%;
+	height: 300px;
+}
+
+.index-final .gallery {
+	display: flex;
+	margin-top: 5rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.index-final .gallery .site img,
+iframe {
+	border-radius: 5px;
+	transition: all 300ms ease-in-out;
+}
+
+.index-final .gallery .site img:hover {
+	box-shadow: 5px 10px 1px rgb(133, 231, 68);
+}
+
+.index-final .gallery .site {
+	width: 48%;
+	text-align: center;
+	background-color: transparent;
+	/* max 2 images per row */
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+.index-final .viewcounter {
+	padding: 5rem;
+
+}
+
+
+
+.intro {
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding-top: 0;
+	text-align: start;
+	padding-right: 4rem;
+	color: #fff;
+	opacity: 0.7;
+}
+
+.intro h1 {
+	font-size: 5rem;
+	font-weight: lighter;
+	color: rgb(170, 252, 117);
+	font-family: Satoshi-light;
+}
+
+.intro h2 {
+	letter-spacing: 4px;
+	font-size: 2rem;
+	margin-top: 4rem;
+	font-family: Satoshi-light;
+}
+
+.intro .intro-btn {
+	padding: 1rem;
+	border-width: 1px;
+	border-color: rgb(170, 252, 117);
+	background-color: #031410;
+	border-radius: 10px;
+	padding-right: 2rem;
+	padding-left: 2rem;
+	font-family: Satoshi-light;
+	font-size: 2rem;
+	color: white;
+	margin-top: 3rem;
+	transition: all 300ms ease-in-out;
+}
+
+.intro .intro-btn:hover {
+	background-color: rgb(170, 252, 117);
+	color: black;
+}
+
+.img-slider {
+	justify-content: end;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 10px;
+	border-radius: 10px;
+	background: #1D212B;
+}
+
+.rss-feed {
+	margin-top: 3rem;
+}
+
+.rss-feed h2 {
+	padding: 4rem;
+}
+
+.img-slider .slide {
+
+	position: absolute;
+	width: 100%;
+	clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide.active {
+	clip-path: circle(150% at 0 50%);
+	transition: 2s;
+	transition-property: clip-path;
+}
+
+.img-slider .slide img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.img-slider .slide .info {
+	position: absolute;
+	top: 0;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 15px 30px;
+}
+
+.img-slider .slide .info h2 {
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: 800;
+	letter-spacing: 2px;
+}
+
+.img-slider .slide .info p {
+	color: #fff;
+	font-size: 16px;
+	width: 60%;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+.img-slider .navigation {
+	position: absolute;
+	display: flex;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn {
+	background: rgba(255, 255, 255, 0.5);
+	width: 12px;
+	height: 12px;
+	margin: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.img-slider .navigation .btn.active {
+	background: #2696E9;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+/* CONTACT US PAGE ------------------------------------------------------------------------------------------------------------------------------*/
+
+#section-wrapper {
+	width: 100%;
+	padding: 5rem;
+	font-family: Satoshi-dark !important;
+}
+
+.box-wrapper {
+	position: relative;
+	display: table;
+	width: 100%;
+	max-width: 1100px;
+	margin: auto;
+	margin-top: 35px;
+	border-radius: 30px;
+}
+
+.info-wrap {
+	width: 35%;
+	height: 551px;
+	padding: 40px;
+	float: left;
+	display: block;
+	border-radius: 30px 0px 0px 30px;
+	background: linear-gradient(0deg, rgba(21, 68, 55, 1) 0%, rgba(2, 27, 32, 1) 100%, rgba(0, 14, 10, 1) 100%, rgba(10, 74, 87, 1) 100%);
+	color: #fff;
+}
+
+.contact-auth {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 70vh;
+	width: 100%;
+	text-align: center;
+	color: white;
+
+}
+
+.contact-auth h1 {
+	font-family: Satoshi-light;
+}
+
+.contact-auth div div {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+}
+
+.info-title {
+	text-align: left;
+	font-size: 28px;
+	letter-spacing: 0.5px;
+}
+
+.info-sub-title {
+	font-size: 18px;
+	font-weight: 300;
+	margin-top: 17px;
+	letter-spacing: 0.5px;
+	line-height: 26px;
+}
+
+.info-details {
+	list-style: none;
+	margin: 60px 0px;
+}
+
+.info-details li {
+	margin-top: 25px;
+	font-size: 18px;
+	color: #fff;
+}
+
+.info-details li i {
+	background: rgb(33, 75, 5);
+	padding: 12px;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+.info-details li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.info-details li a:hover {
+	color: rgb(170, 252, 117);
+}
+
+.social-icons {
+	list-style: none;
+	text-align: center;
+	margin: 20px 0px;
+}
+
+.social-icons li {
+	display: inline-block;
+}
+
+
+.privacy-policy-link {
+
+	margin-top: 1rem;
+	font-family: Satoshi-light;
+	font-size: 2rem;
+	color: #00e1ff;
+}
+
+.social-icons li i {
+	background: rgb(33, 75, 5);
+	color: #fff;
+	padding: 15px;
+	font-size: 20px;
+	border-radius: 22%;
+	margin: 0px 5px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.social-icons li i:hover {
+	background: #fff;
+	color: #000000;
+}
+
+.form-wrap {
+	width: 65%;
+	float: right;
+	padding: 40px 25px 35px 25px;
+	border-radius: 0px 30px 30px 0px;
+	background: #ecf0f3;
+}
+
+.form-title {
+	text-align: left;
+	margin-left: 23px;
+	font-size: 28px;
+	letter-spacing: 0.5px;
+}
+
+.form-fields {
+	display: table;
+	width: 100%;
+	padding: 15px 5px 5px 5px;
+}
+
+.form-fields input,
+.form-fields textarea {
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 18px;
+	color: #555;
+	padding: 20px 10px 20px 5px;
+	width: 100%;
+}
+
+.form-fields .form-group input {
+	width: 100%;
+}
+
+.form-fields textarea {
+	height: 235px;
+	resize: none;
+}
+
+.form-group {
+	width: 100%;
+	float: left;
+	padding: 0px 30px;
+	margin: 14px 12px;
+	border-radius: 25px;
+	box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+}
+
+.form-fields .form-group:last-child {
+	width: 96%;
+}
+
+.submit-button {
+	width: 96%;
+	height: 60px;
+	margin: 0px 12px;
+	border-radius: 30px;
+	font-size: 20px;
+	font-weight: 700;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	background: #173D33;
+	box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
+	transition: 0.5s;
+}
+
+.submit-button:hover {
+	background: #0b201b;
+	color: #ffffff;
+}
+
+
+
+/* Account page ----------------------------------------------------------------------------------------------------------------------*/
+
+.full-space {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 70vh;
+	width: 100%;
+	text-align: center;
+}
+
+.auth-btns {
+	padding-right: 2rem;
+	padding-left: 2rem;
+	padding-top: 1rem;
+	margin-top: 1.3rem;
+	padding-bottom: 1rem;
+	border-radius: 10px;
+	border-width: 0;
+	background-color: #1b191f;
+	color: white;
+	font-family: Satoshi-medium;
+	font-size: 1.5rem;
+	transition: all 300ms ease-in-out;
+}
+
+.auth-btns:hover {
+	transform: translateY(-5px);
+}
+
+.notauthed h1 {
+	color: #fff;
+}
+
+.account-welcome {
+	padding-bottom: 5rem;
+	padding-top: 2rem;
+}
+
+.account-welcome button {
+	margin-left: 2rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	border-radius: 10px;
+	border-width: 0;
+	font-family: Satoshi-medium;
+	font-size: 20px;
+	transition: all 300ms ease-in-out;
+}
+
+.account-welcome button:hover {
+	box-shadow: 3px 3px 8px rgb(109, 51, 51),
+		-3px -3px 8px rgb(209, 66, 61);
+}
+
+.account-welcome h1 {
+	color: rgb(170, 252, 117);
+	font-family: Satoshi-light;
+}
+
+.account-main .options {
+	padding: 3rem;
+}
+
+.account-main .options .optbtn {
+	width: 50%;
+	height: 60px;
+	margin: 0px 12px;
+	border-radius: 30px;
+	font-size: 20px;
+	font-weight: 700;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	text-align: center;
+	background: #173D33;
+	transition: 0.5s;
+}
+
+.account-main #info-editor {
+	padding-right: 10rem;
+	padding-left: 10rem;
+}
+
+.account-main #info-editor form label {
+	color: white;
+}
+
+.account-main #info-editor form button {
+	padding-right: 4rem;
+	padding-left: 4rem;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: 1rem;
+	font-size: 1.3rem;
+	border-width: 0;
+	border-radius: 10px;
+	transition: all 300ms;
+}
+
+.account-main #info-editor form button:hover {
+	box-shadow: 3px 3px 8px rgb(170, 252, 117),
+		-3px -3px 8px rgb(133, 231, 68);
+}
+
+.account-main #info-editor form input {
+	border: none;
+	outline: none;
+	background: none;
+	margin: 1rem;
+	border-radius: 10px;
+	font-size: 18px;
+	color: #555;
+	background-color: rgb(255, 255, 255);
+	padding: 20px 10px 20px 5px;
+	width: 100%;
+}
+
+.account-main #change-pass {
+	padding-right: 10rem;
+	padding-left: 10rem;
+}
+
+.account-main #change-pass form label {
+	color: white;
+}
+
+.account-main #change-pass form button {
+	padding-right: 4rem;
+	padding-left: 4rem;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: 1rem;
+	font-size: 1.3rem;
+	border-width: 0;
+	border-radius: 10px;
+	transition: all 300ms;
+}
+
+.account-main #change-pass form button:hover {
+	box-shadow: 3px 3px 8px rgb(170, 252, 117),
+		-3px -3px 8px rgb(133, 231, 68);
+}
+
+.account-main #change-pass form input {
+	border: none;
+	outline: none;
+	background: none;
+	margin: 1rem;
+	border-radius: 10px;
+	font-size: 18px;
+	color: #555;
+	background-color: rgb(255, 255, 255);
+	padding: 20px 10px 20px 5px;
+	width: 100%;
+}
+
+
+
+/* Log in page --------------------------------------------------------------------------------------------------------------------------*/
+
+
+.login-card-container {
+	padding: 10rem;
+}
+
+.login-card {
+	width: 450px;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 4rem;
+	border-radius: 10px;
+	position: relative;
+}
+
+.login-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(255, 255, 255, 0.15);
+	transform: rotate(-6deg);
+	border-radius: 10px;
+	z-index: -1;
+}
+
+/* ---------- */
+
+/* Login Card Logo */
+.login-card-logo {
+	margin-bottom: 2rem;
+}
+
+.login-card-logo img {
+	width: 60px;
+}
+
+/* ---------- */
+
+/* Login Card Standard */
+.login-card-logo,
+.login-card-header,
+.login-card-footer {
+	text-align: center;
+}
+
+.login-card a {
+	text-decoration: none;
+	color: #35339a;
+}
+
+.login-card a:hover {
+	text-decoration: underline;
+}
+
+/* ---------- */
+
+/* Login Card Header */
+.login-card-header {
+	margin-bottom: 2rem;
+}
+
+.login-card-header h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.login-card-header h1+div {
+	font-size: calc(1rem * 0.8);
+	opacity: 0.8;
+}
+
+/* ---------- */
+
+/* Login Card Form */
+.login-card-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.login-card-form .form-item {
+	position: relative;
+}
+
+.login-card-form .form-item .form-item-icon {
+	position: absolute;
+	top: 0.82rem;
+	left: 1.4rem;
+	font-size: 1.3rem;
+	opacity: 0.4;
+}
+
+.login-card-form .checkbox {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.login-card-form .form-item-other {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: calc(1rem * 0.8);
+	margin-bottom: 0.5rem;
+}
+
+/* ---------- */
+
+/* Login Card Footer */
+.login-card-footer {
+	margin-top: 1.5rem;
+	font-size: calc(1rem * 0.8);
+}
+
+/* ---------- */
+
+/* Login Card Form Elements */
+.login-card input[type="text"],
+.login-card input[type="password"],
+.login-card input[type="email"] {
+	border: none;
+	outline: none;
+	background: rgba(255, 255, 255, 0.3);
+	padding: 1rem 1.5rem;
+	padding-left: calc(1rem * 3.5);
+	border-radius: 100px;
+	width: 100%;
+	transition: background 0.5s;
+}
+
+.login-card input:focus {
+	background: white;
+}
+
+.login-card input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+	accent-color: black;
+}
+
+.login-card button {
+	background: black;
+	color: white;
+	padding: 1rem;
+	border-radius: 100px;
+	border-width: 0;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all 300ms ease-in-out;
+}
+
+.login-card button:hover {
+	background-color: rgba(0, 0, 0, 0.75);
+	cursor: pointer;
+}
+
+/* ---------- */
+
+/* ---------- */
+
+/* Responsive */
+
+
+/* REGISTER PAGE -------------------------------------------------------------------------------------------------------------------------- */
+
+.register-card-container {
+	padding: 3rem;
+}
+
+.register-card {
+	width: 450px;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 2rem;
+	border-radius: 10px;
+	position: relative;
+}
+
+.register-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(255, 255, 255, 0.15);
+	transform: rotate(-6deg);
+	border-radius: 10px;
+	z-index: -1;
+}
+
+/* ---------- */
+
+/* Register Card Logo */
+.register-card-logo {
+	margin-bottom: 2rem;
+}
+
+.register-card-logo img {
+	width: 60px;
+}
+
+/* ---------- */
+
+/* Register Card Standard */
+.register-card-logo,
+.register-card-header,
+.register-card-footer {
+	text-align: center;
+}
+
+.register-card a {
+	text-decoration: none;
+	color: #35339a;
+}
+
+.register-card a:hover {
+	text-decoration: underline;
+}
+
+/* ---------- */
+
+/* Register Card Header */
+.register-card-header {
+	margin-bottom: 2rem;
+}
+
+.register-card-header h1 {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+.register-card-header h1+div {
+	font-size: calc(1rem * 0.8);
+	opacity: 0.8;
+}
+
+/* ---------- */
+
+/* Register Card Form */
+.register-card-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.register-card-form .form-item {
+	position: relative;
+}
+
+.register-card-form .form-item .form-item-icon {
+	position: absolute;
+	top: 0.82rem;
+	left: 1.4rem;
+	font-size: 1.3rem;
+	opacity: 0.4;
+}
+
+.register-card-form .checkbox {
+	display: flex;
+	align-items: center;
+	gap: 7px;
+}
+
+.register-card-form .form-item-other {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: calc(1rem * 0.8);
+	margin-bottom: 0.5rem;
+}
+
+/* ---------- */
+
+/* Register Card Footer */
+.register-card-footer {
+	margin-top: 1.5rem;
+	font-size: calc(1rem * 0.8);
+}
+
+/* ---------- */
+
+/* Register Card Form Elements */
+.register-card input[type="text"],
+.register-card input[type="password"],
+.register-card input[type="date"],
+.register-card input[type="email"] {
+	border: none;
+	outline: none;
+	background: rgba(255, 255, 255, 0.3);
+	padding: 1rem 1.5rem;
+	padding-left: calc(1rem * 3.5);
+	border-radius: 100px;
+	width: 100%;
+	transition: background 0.5s;
+}
+
+.register-card input:focus {
+	background: white;
+}
+
+.register-card input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+	accent-color: black;
+}
+
+.register-card button {
+	background: black;
+	color: white;
+	padding: 1rem;
+	border-radius: 100px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: all 300ms ease-in-out;
+	border-width: 0;
+}
+
+.register-card button:hover {
+	background-color: rgba(0, 0, 0, 0.75);
+	cursor: pointer;
+}
+
+/* ---------- */
+
+/* Responsive */
+
+
+/* PRIVACY POLICY PAGE --------------------------------------------------------------------------------------- */
+
+.privacypolicy-main {
+	padding: 5rem;
+}
+
+.privacypolicy-main .intro-top {
+	text-align: center;
+}
+
+.privacypolicy-main h1 {
+	text-align: center;
+	color: rgb(170, 252, 117);
+}
+
+.privacypolicy-main h2 {
+	color: rgb(170, 252, 117);
+}
+
+.privacypolicy-main p {
+	color: #fff;
+	padding-top: 1rem;
+	padding-bottom: 4rem;
+	font-size: 1.2rem;
+}
+
+.privacypolicy-main p a {
+	color: #00e1ff;
+}
+
+
+/* PITCH TYPES PAGE ------------------------------------------------------------------------------------ */
+
+.pitchtypes-main {
+	padding: 5rem;
+}
+
+.pitchtypes-main h1 {
+	padding-bottom: 4rem;
+	color: rgb(133, 231, 68);
+	font-family: Satoshi-light;
+}
+
+.pitchtypes-main .pitchtype {
+	width: 100%;
+	margin: 2rem;
+	display: flex;
+}
+
+.pitchtypes-main .pitchtype .desc {
+	width: 50%;
+	padding: 3rem;
+	color: white;
+}
+
+.pitchtypes-main .pitchtype .img {
+	width: 50%;
+}
+
+.pitchtypes-main .pitchtype .img img {
+	border-radius: 10px;
+}
+
+.pitchtypes-main .pitchtype h2 {
+	color: rgb(133, 231, 68);
+	font-family: Satoshi-light;
+	padding-bottom: 1rem;
+}
+
+.pitchtypes-main .pitchtype h3 {
+	color: rgb(133, 231, 68);
+	font-family: Satoshi-light;
+	padding-top: 1rem;
+}
+
+/* information index page --------------------------------------------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+.search {
+	width: 50%;
+	position: relative;
+	display: flex;
+}
+
+.searchTerm {
+	width: 100%;
+	border: 3px solid rgb(133, 231, 68);
+	border-right: none;
+	padding: 5px;
+	height: 40px;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+	font-family: Satoshi-medium;
+	font-size: 1.1rem;
+	color: #000000;
+}
+
+.searchTerm::placeholder {
+	color: #555555;
+	font-size: 1.1rem;
+	font-family: Satoshi-medium;
+}
+
+.searchTerm:focus {
+	color: #000000;
+}
+
+.searchButton {
+	width: 40px;
+	height: 40px;
+	border: 1px solid rgb(133, 231, 68);
+	background: rgb(133, 231, 68);
+	text-align: center;
+	color: #000000;
+	border-radius: 0 5px 5px 0;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.allsites {
+	padding: 3rem;
+}
+
+.allsites h2 {
+	text-align: center;
+	font-family: Satoshi-light;
+	font-size: 4rem;
+	font-weight: lighter;
+	color: rgb(170, 252, 117);
+	opacity: 0.8;
+	margin-bottom: 2rem;
+}
+
+.allsites .gallery .site {
+	height: 100%;
+}
+
+.gallery .warn {
+	color: rgb(204, 88, 84);
+}
+
+.allsites .gallery .site .main-stuff {
+	display: flex;
+	background-color: #0b201b;
+	border-radius: 10px;
+	padding: 5px;
+	transition: all 300ms ease-in-out;
+}
+
+.allsites .gallery .site .main-stuff:hover {
+	background-color: #20443c;
+}
+
+.allsites .gallery .site .site-name {
+	color: rgb(255, 255, 255);
+	padding: 1rem;
+	font-size: 2rem;
+	font-family: Satoshi-light;
+}
+
+.allsites .gallery .site .menu {
+	width: 30%;
+	height: 100%;
+
+}
+
+.allsites .gallery .site .menu .btn button {
+	width: 80%;
+	margin: 0.3rem;
+	border-radius: 10px;
+	padding: 5px;
+	border-width: 1px;
+	background-color: #0a1d18;
+	color: white;
+	font-family: Satoshi-light;
+	font-size: 1rem;
+	border-color: white;
+	transition: all 300ms ease-in-out;
+}
+
+.allsites .gallery .site .menu .btn button:hover {
+	background-color: rgb(133, 231, 68);
+	color: #000000;
+	font-weight: bold;
+}
+
+.allsites .gallery {
+	display: flex;
+	margin-top: 5rem;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.allsites .gallery .site img {
+	border-radius: 5px;
+}
+
+.allsites .gallery .site {
+	width: 48%;
+	text-align: center;
+	background-color: transparent;
+	/* max 2 images per row */
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+
+
+
+
+/* site details and featurespage -------------------------------------------------------------------------------------*/
+
+
+.sitedetails {
+	display: flex;
+	width: 100%;
+}
+
+.sitedetails .left,
+.right {
+	width: 50%;
+	padding: 1rem;
+}
+
+.sitedetails .left h1 {
+	padding: 1rem;
+	color: rgb(133, 231, 68);
+}
+
+.sitedetails .left img {
+	border-radius: 5px;
+}
+
+.sitedetails .right {
+	color: white;
+	padding: 4rem;
+}
+
+.sitedetails .right p {
+	padding-top: 1rem;
+}
+
+.sitedetails .right h2 {
+	padding-top: 1rem;
+}
+
+.sitedetails .right ul {
+	padding: 1rem;
+}
+
+.sitedetails .right .btngroup button {
+	width: 70%;
+	padding: 1rem;
+	font-size: 1.2rem;
+	border-width: 1;
+	border-color: white;
+	color: white;
+	border-radius: 10px;
+	margin-top: 1rem;
+	background-color: #0a1d18;
+	transition: all 300ms ease-in-out;
+}
+
+.sitedetails .right .btngroup button:hover {
+	background-color: rgb(133, 231, 68);
+	color: #000000;
+	font-weight: bold;
+}
+
+.gallery-main h1 {
+	text-align: center;
+	color: rgb(133, 231, 68);
+	padding: 3rem;
+}
+
+.gallery-main {
+	padding-left: 5rem;
+	padding-right: 5rem;
+	padding-top: 1rem;
+}
+
+.gallery-main .img img {
+	padding: 2rem;
+	border-radius: 50px;
+	transition: all 300ms ease-in-out;
+}
+
+.gallery-main .img img:hover {
+	box-shadow: 5px 10px rgb(133, 231, 68);
+}
+
+/* local attractions ------------------------------------------------------------------------------------- */
+
+.localattractions-main {
+	color: white;
+	padding: 4rem;
+}
+
+.localattractions-main h1 {
+	color: rgb(133, 231, 68);
+}
+
+.localattractions-main .attraction {
+	margin-top: 2rem;
+	background-color: #0b201b;
+	border-radius: 10px;
+	padding: 2rem;
+	transition: all 300ms ease-in-out;
+}
+
+.localattractions-main .attraction:hover {
+	box-shadow: 5px 10px rgb(133, 231, 68);
+	;
+}
+
+.localattractions-main .attraction img {
+	width: 600px;
+	border-radius: 10px;
+	padding-top: 2rem;
+}
+
+.localattractions-main .attraction .special-info {
+	padding-top: 2rem;
+	font-size: 1.2rem;
+	color: #00e1ff;
+}
+
+/* AVAILABILITY PAGE ---------------------------------------------------------------------------------- */
+
+.availability-main {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+}
+
+.availability-main .pitches {
+	padding: 1rem;
+	color: white;
+	font-family: Satoshi-light;
+}
+
+.availability-main .pitches h1 {
+	color: rgb(133, 231, 68);
+	padding: 2rem;
+}
+
+.availability-main .pitches h2 a {
+	color: #00e1ff;
+}
+
+.availability-main .swimming-sessions {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: white;
+}
+
+.availability-main .swimming-sessions h1 {
+	color: rgb(133, 231, 68);
+	padding: 2rem;
+}
+
+.availability-main .swimming-sessions {
+	padding: 3rem;
+}
+
+.availability-main .warns {
+	padding: 3rem;
+}
+
+
+/* reviews page --------------------------------------------------------------------------------------- */
+
+
+.reviews-main h1 {
+	color: rgb(133, 231, 68);
+	text-align: center;
+	font-family: Satoshi-light;
+	padding: 2rem;
+}
+
+
+.reviews-main .review {
+	margin: 5rem;
+	background-color: #0b201b;
+	border-radius: 10px;
+	padding: 1rem;
+	color: white;
+	transition: all 300ms ease-in-out;
+
+}
+
+.reviews-main .review:hover {
+	box-shadow: 5px 10px rgb(133, 231, 68);
+}
+
+.reviews-main .review .rating span {
+	color: rgb(133, 231, 68)
+}
+
+
+/* MEDIA QUERIES --------------------------------------------------------------------------------- */
+
+@media screen and (max-width:1700px) {
+	.intro h1 {
+		font-size: 4rem;
+	}
+
+	.intro-btn {
+		font-size: 1rem;
+	}
+
+	.intro h2 {
+		margin-top: 2rem;
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (max-width:1400px) {
+	.intro h1 {
+		font-size: 3rem;
+	}
+
+	.intro h2 {
+		margin-top: 1rem;
+		font-size: 1rem;
+		padding-right: 0;
+	}
+
+	.intro .intro-btn {
+		font-size: 1.5rem;
+		padding: 1.5rem;
+
+	}
+}
+
+@media screen and (max-width:1200px) {
+	.info-title {
+		font-size: 20px;
+	}
+
+	.info-sub-title {
+		font-size: 13px;
+	}
+}
+
+@media screen and (max-width:1100px) {
+	.index-top {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 30rem;
+	}
+
+	.index-mid .pitch-types {
+		display: block;
+	}
+
+	.index-mid h2 {
+		font-size: 3rem;
+	}
+
+	.img-slider {
+		width: 90%;
+		margin: 5%;
+	}
+
+	.intro h1 {
+		font-size: 3rem;
+	}
+
+	.intro h2 {
+		margin-top: 0;
+		font-size: 1.4rem;
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+
+	.intro {
+		width: 100%;
+		padding-right: 0;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.img-slider .slide .info {
+		padding: 7px 20px;
+	}
+
+	.img-slider .slide .info h2 {
+		font-size: 13px;
+	}
+	.allsites .gallery .site .menu .btn button{
+		font-size: 0.9rem;
+	}
+
+	.pitchtypes-main{
+		padding: 4rem;
+	}
+
+	.pitchtypes-main .pitchtype {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		display: block;
+		margin-left: 0;
+		padding-left: 0;
+		margin-bottom: 3rem;
+	}
+
+	.pitchtypes-main .pitchtype .img{
+		width: 100%;
+	}
+	.pitchtypes-main .pitchtype .desc {
+		width: 100%;
+		padding: 1rem;
+	}
+	.pitchtypes-main h1 { text-align: center;
+		font-size: 1.5rem;
+	}
+	.reviews-main .review {
+		padding: 0.8rem;
+		margin: 3rem;
+	}
+}
+
+@media screen and (max-width:1000px) {
+	.allsites .gallery .site {
+		width: 100%;
+	}
+
+	#section-wrapper {
+		padding: 1rem;
+	}
+
+	.info-title {
+		font-size: 23px;
+	}
+
+	.info-sub-title {
+		font-size: 15px;
+	}
+
+	.box-wrapper {
+		width: 100%;
+	}
+
+	.info-wrap,
+	.form-wrap {
+		width: 100%;
+		height: inherit;
+		float: none;
+	}
+
+	.info-wrap {
+		border-radius: 30px 30px 0px 0px;
+	}
+
+	.form-wrap {
+		border-radius: 0px 0px 30px 30px;
+	}
+
+	.form-group {
+		width: 100%;
+		float: none;
+		margin: 25px 0px;
+	}
+
+	.form-fields .form-group:last-child,
+	.submit-button {
+		width: 100%;
+	}
+
+	.submit-button {
+		margin: 10px 0px;
+	}
+
+	.index-final .gallery .site {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:800px) {
+	.index-top {
+		margin-bottom: 20rem;
+	}
+
+		.gallery-main h1 {
+			font-size: 1.4rem;
+			padding-right: 0;
+			padding-left: 0;
+		}
+
+		.gallery-main {
+			padding: 2rem;
+		}
+				.gallery-main .img img {
+					padding: 1rem;
+				}
+
+
+	.localattractions-main{
+		padding: 2rem;
+	
+	}
+	
+	.localattractions-main .attraction img {
+		width: 100%;
+	}
+
+	.localattractions-main h1 {
+		color: rgb(133, 231, 68);
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	.localattractions-main .attraction {
+		padding: 1rem;
+	}
+
+	.search {
+		width: 100%;
+	}
+	
+	.searchTerm {
+		font-size: 0.7rem;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.register-card {
+		width: 280px;
+		padding: 2rem;
+	}
+	.sitedetails .right {
+		color: white;
+		padding: 1rem;
+	}
+		.sitedetails .right .btngroup button{
+			width: 100%;
+		}
+
+	.sitedetails .left h1{
+		font-size: 1.3rem;
+	}
+	.allsites .gallery .site .site-name{
+		font-size: 1.5rem;
+	}
+
+	.allsites .gallery .site .main-stuff {
+		display: block;
+		width: 100%;
+	}
+
+	.allsites .gallery .site .main-stuff img {
+		width: 100%;
+	}
+
+	.allsites .gallery .site .menu{
+		width: 100%;
+	}
+	.allsites .gallery .site .menu .btn button {
+		width: 100%;
+	}
+
+	.login-card {
+		width: 280px;
+		padding: 2rem;
+	}
+
+	.account-main .options .optbtn {
+		width: 70%;
+	}
+
+	.account-main .options{
+		padding: 1rem;
+	}
+
+	.account-welcome {
+		display: block;
+		width: 100%;
+		justify-content: center;
+		text-align: center;
+	}
+	.account-main .options .optbtn{
+		font-size: 0.7rem;
+	}
+
+	.account-main #info-editor {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+
+	.account-main #change-pass{
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+
+	.account-welcome button {
+		margin-top: 1rem;
+		padding-left: 1rem;
+		padding-right: 1rem;}
+}
+
+@media screen and (max-width:550px) {
+	.index-top {
+		margin-bottom: 12rem;
+	}
+
+		.gallery-main {
+			padding: 1rem;
+		}
+	
+		.gallery-main .img img {
+			padding: 0.5rem;
+		}
+
+		.viewcounter h2 {
+			font-size: 2rem;
+		}
+	
+		.rss-feed h2 {
+			font-size: 2rem;
+		}
+	
+		.index-final h2 {
+			font-size: 2rem;
+		}
+	
+		.allsites h2 {
+			font-size: 2rem;
+		}
+
+	.intro h1 {
+		font-size: 1.5rem;
+	}
+
+	.index-mid h2 {
+		font-size: 1.5rem;
+	}
+
+	.intro .intro-btn {
+		padding: 1rem;
+		font-size: 1rem;
+		margin: 1rem;
+	}
+
+	.img-slider .navigation {
+		display: none;
+	}
+
+	.img-slider {
+		width: 96%;
+		margin: 4%;
+	}
+
+	.intro h2 {
+		margin-top: 0;
+		font-size: 1rem;
+		padding: 0;
+		letter-spacing: 2px;
+	}
+
+	.img-slider .slide .info {
+		padding: 5px 10px;
+	}
+
+	.img-slider .slide .info h2 {
+
+
+		font-size: 10px;
+
+	}
+}
+
+@media screen and (max-width:400px) {
+	
+
+	.intro h2 {
+		margin-top: 1rem;
+		font-size: 1rem;
+		padding-right: 0;
+	}
+
+	.intro .intro-btn {
+		font-size: 1.5rem;
+		
+	}
+
+	.notauthed h1 {
+		font-size: 25px;
+	}
+}
