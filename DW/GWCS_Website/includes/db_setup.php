@@ -2,7 +2,7 @@
 
 // this script will initialize database tables //
 
-include_once 'db_connect.php'; 
+include_once 'db_connect.php';
 
 // persistent check table to see if tables are already created.
 $DB_CREATED = "CREATE TABLE IF NOT EXISTS `Done` (
@@ -375,8 +375,6 @@ function INSERT_INITIAL_DATA($conn)
         if ($conn->query($sql) === false) {
             echo "Error inserting pitches";
         }
-
-
     }
 }
 
